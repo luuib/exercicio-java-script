@@ -49,7 +49,7 @@
 </head>
 
 <body>
-    <h1>Exemplo de Página HTML com JavaScript</h1>
+    <h1>digite o seu CPF</h1>
 
     <label for="nome">Digite seu nome:</label>
     <input type="text" id="nome" placeholder="Seu nome">
@@ -68,34 +68,34 @@
             // Verifica se um nome foi digitado (não está vazio)
             if (nome) {
                 // Se um nome foi digitado, exibe uma saudação personalizada na área "minhaMensagem"
-                document.getElementById("minhaMensagem").innerHTML = "Olá, " + nome + "!";
+                document.getElementById("minhaMensagem").innerHTML = "valeu pelo CPF OTARIO!! " + nome + "!";
 
                 // Obtém a lista de nomes digitados com o id "nomesDigitados"
                 let listaNomes = document.getElementById("nomesDigitados");
 
-                // Cria um elemento de lista (li) para o nome digitado
+               
                 let li = document.createElement("li");
 
-                // Adiciona o nome digitado como texto ao elemento li
+               
                 li.appendChild(document.createTextNode(nome));
 
-                // Adiciona o elemento li à lista de nomes digitados
+              
                 listaNomes.appendChild(li);
             } else {
-                // Se nenhum nome foi digitado, exibe uma mensagem de solicitação no elemento "minhaMensagem"
+               
                 document.getElementById("minhaMensagem").innerHTML = "Por favor, digite seu nome.";
             }
         });
 
-        // Adiciona um ouvinte de evento ao botão com o id "limparBotao" quando ele é clicado
+      
         document.getElementById("limparBotao").addEventListener("click", function () {
-            // Limpa o campo de entrada com o id "nome"
+           
             document.getElementById("nome").value = "";
 
-            // Limpa a mensagem exibida no elemento "minhaMensagem"
+           
             document.getElementById("minhaMensagem").innerHTML = "";
 
-            // Limpa a lista de nomes digitados no elemento "nomesDigitados"
+            
             document.getElementById("nomesDigitados").innerHTML = "";
         });
 
